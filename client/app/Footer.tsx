@@ -8,7 +8,7 @@ export default function Footer(props: {
     const { topArtists } = props;
     var stringBuilder = "My Spotify Wrapped %0A"
     for(var i = 0; i < topArtists.length; i++) {
-        stringBuilder += (i + 1).toString() + ". " + topArtists[i][0] + "%0A"
+        stringBuilder += (i + 1).toString() + ". " + topArtists[i]['name'] + "%0A"
     }
 
     return (

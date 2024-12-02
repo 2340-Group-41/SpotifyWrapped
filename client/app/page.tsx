@@ -75,6 +75,8 @@ export default function Home() {
     fetchData();
   }, []);
 
+  console.log(wrappedInfo.topArtists);
+
   return (
     <div className="w-full flex flex-col items-center">
       {loggedIn && <>
