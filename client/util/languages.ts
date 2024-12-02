@@ -101,11 +101,11 @@ const CHINESE: LanguageType = {
 
 const KOREAN: LanguageType = {
   lang: "Korean",
-  minutesListened: '收听分钟数',
-  topGenre: '热门流派',
-  your: '你的',
-  top5: '前 5 名',
-  artists: '艺术家',
+  minutesListened: '청취 시간',
+  topGenre: '최고 장르',
+  your: '당신의',
+  top5: '상위 5개',
+  artists: '아티스트',
   darkMode: '다크 모드',
   albums: "앨범",
   cover: "아래 화살표를 사용하여 음악이 어떤 것인지 알아보세요.",
