@@ -50,7 +50,7 @@ export default function Home() {
         });
         const wrappedsData = await wrappedsRes.json();
         // if there are no wrappeds, generate one
-        if (wrappedsData.items.length === 0) {;
+        if (wrappedsData.items.length === 0) {
           const newWrappedRes = await fetch("http://localhost:8000/spotify/create-wrapped", {
             credentials: "include",
           });
