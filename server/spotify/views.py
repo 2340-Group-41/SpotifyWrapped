@@ -183,7 +183,7 @@ class GetWrappeds(APIView):
                     wrappeds = {'items': wrappeds}
                     return Response(wrappeds, status=status.HTTP_200_OK)
                 except Wrapped.DoesNotExist:
-                    return Response({"No data yet"}, status=status.HTTP_200_OK)
+                    return Response({'items': []}, status=status.HTTP_200_OK)
             except Exception as e:
                 print(e)
                 return Response({'error': 'Error fetching data'}, status=status.HTTP_400_BAD_REQUEST)
@@ -510,6 +510,7 @@ class CreateWrapped(APIView):
                     wrapped.user_description = {"english": english_response_text, "korean": korean_response_text, "chinese": chinese_response_text},
                     wrapped.date_updated = make_aware(datetime.now())
                     wrapped.save()
+                print(wrapped.user_description)
 
 
                 print("llm data fetch successful")

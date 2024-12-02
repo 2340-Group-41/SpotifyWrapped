@@ -10,13 +10,19 @@ export default function UserDescription(props: {
   const lang = useContext(LangContext);
 
   const getDescription = () => {
+    console.log("description:");
+    console.log(description);
     switch (lang.lang) {
       case "English":
-        return description.english;
+        console.log("english:");
+        // @ts-ignore
+        return description[0].english;
       case "Chinese":
-        return description.chinese;
+        // @ts-ignore
+        return description[0].chinese;
       case "Korean":
-        return description.korean;
+        // @ts-ignore
+        return description[0].korean;
     }
   }
 
